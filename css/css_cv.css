@@ -1,0 +1,161 @@
+/* --- RESETEO Y FUENTE TIPO TERMINAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Fuente monoespaciada para estilo de código/terminal */
+    font-family: 'Consolas', 'Courier New', Courier, monospace; 
+}
+
+body {
+    padding: 20px;
+    background-color: #0a0a0a; /* Fondo casi negro */
+    color: #c9d1d9; /* Texto gris claro para que no canse la vista */
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.cv-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #111111; /* Gris muy oscuro */
+    /* Borde verde neón con efecto de brillo (glow) */
+    border: 1px solid #00ff41; 
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.15);
+}
+
+/* --- ENCABEZADO --- */
+.cv-header {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    border-bottom: 1px solid #00ff41;
+    background: linear-gradient(180deg, #1a1a1a 0%, #111111 100%);
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    /* Borde verde con brillo para la foto */
+    border: 2px solid #00ff41;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+.foto-perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Opcional: Le da un tono ligeramente desaturado para que encaje mejor con el fondo oscuro */
+    filter: saturate(80%); 
+}
+
+.titulo-perfil h1 {
+    font-size: 32px;
+    color: #00ff41; /* Verde Neón */
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px rgba(0, 255, 65, 0.3);
+}
+
+.titulo-perfil h2 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #8b949e; /* Gris azulado para contraste */
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+.cv-main {
+    display: flex;
+}
+
+.columna-izquierda {
+    width: 35%;
+    border-right: 1px solid #00ff41;
+    padding: 30px;
+    background-color: #0d0d0d; /* Fondo un poco más oscuro para la barra lateral */
+}
+
+.columna-derecha {
+    width: 65%;
+    padding: 30px;
+}
+
+.seccion {
+    margin-bottom: 40px;
+}
+
+/* Estilo para los títulos de cada sección con un "cursor" parpadeante falso */
+.seccion h3 {
+    font-size: 22px;
+    color: #00ff41;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed #333;
+    padding-bottom: 8px;
+}
+
+.seccion h3::before {
+    font-size: 16px;
+    color: #8b949e;
+}
+
+/* --- LISTAS (Viñetas estilo terminal) --- */
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+ul li strong {
+    color: #00ff41; /* Destaca los textos en negrita en verde */
+}
+
+/* Cambia el guión por un símbolo de "mayor que" simulando un input */
+ul li::before {
+    content: "> ";
+    color: #00ff41;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* --- PIE DE PÁGINA --- */
+.cv-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    border-top: 1px solid #00ff41;
+    background-color: #0d0d0d;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #8b949e;
+    font-size: 14px;
+}
+
+.icono {
+    width: 25px;
+    height: 25px;
+    /* Efecto hover en las imágenes */
+    transition: transform 0.3s ease;
+}
+
+.footer-item:hover .icono {
+    transform: scale(1.2); /* El icono crece un poco al pasar el mouse */
+}
+
+.footer-item:hover span {
+    color: #00ff41;
+    cursor: default;
+}
