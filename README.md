@@ -14,6 +14,8 @@ Este proyecto presenta un CV interactivo diseñado con una estética orientada a
 
 ## Estructura del Proyecto
 El repositorio se organiza de la siguiente manera:
+* `/html`: Archivo principal que contiene la estructura y el contenido del Currículum Vitae.
+* `/index`: Archivo de acceso (actualmente vacío debido a error de interpretación humana)
 * `/css`: Carpeta que aloja la hoja de estilos personalizada (`css_cv.css`).
 * `/assets`: Directorio para archivos auxiliares.
     * `/img`: Imágenes de perfil e iconos de contacto (Email, Teléfono, GitHub).
