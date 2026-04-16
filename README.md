@@ -1,11 +1,8 @@
 Este repositorio contiene el desarrollo de una página web estática para un Currículum Vitae profesional.
 
-Nombre de creador: 
-Alexander Lagos Allilef
-Sección: 
-IEC-N3-C1
-Profesor: 
-Erick Bailey Rebolledo 
+* Nombre de creador: Alexander Lagos Allilef
+* Sección: IEC-N3-C1
+* Profesor: Erick Bailey Rebolledo 
 
 Este proyecto presenta un CV interactivo diseñado con una estética orientada al mundo de la ciberseguridad
 
