@@ -13,7 +13,7 @@ Este proyecto presenta un CV interactivo diseñado con una estética orientada a
 * **Git/GitHub**: Control de versiones y despliegue.
 
 ## Estructura del Proyecto
-Siguiendo las instrucciones de la evaluación, el repositorio se organiza de la siguiente manera:
+El repositorio se organiza de la siguiente manera:
 * `/css`: Carpeta que aloja la hoja de estilos personalizada (`css_cv.css`).
 * `/assets`: Directorio para archivos auxiliares.
     * `/img`: Imágenes de perfil e iconos de contacto (Email, Teléfono, GitHub).
