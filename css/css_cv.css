@@ -3,13 +3,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* El !important protege tu tipografía para que Bootstrap no la cambie a Arial/Helvetica */
+    /* PROTECCIÓN DE TIPOGRAFÍA: El !important fuerza al navegador a usar el estilo de consola, 
+       impidiendo que Bootstrap cambie tu diseño a su fuente predeterminada (Arial/Helvetica). */
     font-family: 'Consolas', 'Courier New', Courier, monospace !important; 
 }
 
 body {
     padding: 20px;
-    /* El !important evita que Bootstrap ponga el fondo blanco predeterminado */
+    /* PROTECCIÓN DE FONDO: Evita que Bootstrap pinte la página de blanco. */
     background-color: #0a0a0a !important; 
     color: #c9d1d9; 
 }
@@ -19,6 +20,7 @@ body {
     max-width: 900px;
     margin: 0 auto;
     background-color: #111111;
+    /* EFECTO NEÓN HACKER: Al combinar un borde sólido con una sombra (box-shadow) del mismo tono, se logra el efecto de luz brillante. */
     border: 1px solid #00ff41; 
     box-shadow: 0 0 15px rgba(0, 255, 65, 0.15);
 }
@@ -58,6 +60,7 @@ body {
     margin-bottom: 5px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    /* BRILLO EN TEXTO: text-shadow funciona igual que box-shadow pero enfocado exclusivamente en las letras. */
     text-shadow: 0 0 5px rgba(0, 255, 65, 0.3);
 }
 
@@ -99,7 +102,9 @@ body {
 /* --- LISTAS (Viñetas estilo terminal) --- */
 ul {
     list-style-type: none;
-    padding-left: 0; /* Corrección para Bootstrap: quita el margen izquierdo extra que añade por defecto */
+    /* RESETEO DE BOOTSTRAP: Bootstrap añade margen izquierdo (padding-left) a los <ul>. 
+       Lo forzamos a 0 para que nuestros propios íconos de lista queden bien alineados. */
+    padding-left: 0; 
 }
 
 ul li {
@@ -111,6 +116,7 @@ ul li strong {
     color: #00ff41; 
 }
 
+/* INYECCIÓN DE CONTENIDO: ::before permite insertar el símbolo ">" por CSS sin tener que escribirlo a mano en cada <li> del HTML. */
 ul li::before {
     content: "> ";
     color: #00ff41;
@@ -139,6 +145,7 @@ ul li::before {
 .icono {
     width: 25px;
     height: 25px;
+    /* TRANSICIÓN: Prepara la imagen para que cualquier cambio futuro (como el hover) ocurra suavemente en 0.3 segundos. */
     transition: transform 0.3s ease;
 }
 
@@ -146,8 +153,9 @@ ul li::before {
     transform: scale(1.2); 
 }
 
-/* --- PROTECCIÓN DE ENLACES CONTRA BOOTSTRAP --- */
-/* Bootstrap vuelve todos los enlaces azules y subrayados. Esto los fuerza a mantener el estilo de tu CV. */
+/* --- PROTECCIÓN CONTRA EL REBOOT DE BOOTSTRAP --- */
+/* Por defecto, Bootstrap pinta todos los enlaces (<a>) de color azul y los subraya. 
+   Recuperamos el control aquí para mantener la estética oscura. */
 a {
     color: #8b949e !important; 
     text-decoration: none !important;
